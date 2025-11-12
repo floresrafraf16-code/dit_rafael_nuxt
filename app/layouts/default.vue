@@ -16,18 +16,18 @@
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi mdi-account-file" title="My Files" value="myfiles"></v-list-item>
-          <v-list-item prepend-icon="mdi mdi-folder-account" title="Shared with me" value="shared"></v-list-item>
-          <v-list-item prepend-icon="mdi-star" title="Starred" value="starred"></v-list-item>
+          <v-list-item prepend-icon="mdi mdi-account-circle" title="My Files" value="myfiles"></v-list-item>
+          <v-list-item prepend-icon="mdi mdi-account-supervisor-circle" title="Shared with Me" value="shared"></v-list-item>
+          <v-list-item prepend-icon="mdi mdi-star-circle" title="Starred" value="starred"></v-list-item>
         </v-list>
       </v-navigation-drawer>
 
-    <v-app-bar :elevation="6">
+    <v-app-bar :elevation="3">
   <template v-slot:prepend>
     <v-app-bar-nav-icon></v-app-bar-nav-icon>
   </template>
 
-  <v-app-bar-title>Application Bar</v-app-bar-title>
+  <v-app-bar-title>PixelCraft</v-app-bar-title>
 </v-app-bar>
 
 
