@@ -1,9 +1,8 @@
 <template>
   <v-app>
 
-
      <v-navigation-drawer
-       
+      v-model = "drawer"
       >
         <v-list>
           <v-list-item
@@ -16,20 +15,20 @@
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi mdi-account-circle" title="My Files" value="myfiles"></v-list-item>
-          <v-list-item prepend-icon="mdi mdi-account-supervisor-circle" title="Shared with Me" value="shared"></v-list-item>
-          <v-list-item prepend-icon="mdi mdi-star-circle" title="Starred" value="starred"></v-list-item>
+          <v-list-item to="/" prepend-icon="mdi mdi-view-dashboard" title="Dashboard" value="myfiles"></v-list-item>
+          <v-list-item to="/category" prepend-icon="mdi mdi-shape-plus" title="Category" value="shared"></v-list-item>
+          <v-list-item to="/inventory" prepend-icon="mdi mdi-folder-account" title="Inventory" value="starred"></v-list-item>
+          <v-list-item to="/user" prepend-icon="mdi mdi-folder-account" title="User" value="user"></v-list-item>
         </v-list>
       </v-navigation-drawer>
 
     <v-app-bar :elevation="3">
   <template v-slot:prepend>
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon @click.stop = "drawer =! drawer"></v-app-bar-nav-icon>
   </template>
 
   <v-app-bar-title>PixelCraft</v-app-bar-title>
 </v-app-bar>
-
 
 
     <v-main>
@@ -39,3 +38,8 @@
     </v-main>
   </v-app>
 </template>
+
+
+<script setup >
+const drawer = ref (true)
+</script>
